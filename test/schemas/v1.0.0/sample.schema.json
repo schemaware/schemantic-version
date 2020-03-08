@@ -1,0 +1,57 @@
+{
+  "$id": "https://example.com/calendar.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$version": "1.0.0",
+  "description": "A representation of an event",
+  "type": "object",
+  "required": [ "dtstart", "summary" ],
+  "additionalProperties": false,
+  "properties": {
+    "dtstart": {
+      "type": "string",
+      "description": "Event starting time",
+      "maxLength": 64
+    },
+    "dtend": {
+      "type": "string",
+      "description": "Event ending time"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string",
+      "maxLength": 32
+    },
+    "url": {
+      "type": "string"
+    },
+    "duration": {
+      "type": "string",
+      "description": "Event duration"
+    },
+    "rdate": {
+      "type": "string",
+      "description": "Recurrence date"
+    },
+    "rrule": {
+      "type": "string",
+      "description": "Recurrence rule"
+    },
+    "category": {
+      "type": "string"
+    },
+    "nested_object": {
+      "type": "object",
+      "properties": {
+        "string": {
+          "type": "string",
+          "description":  "schemaA"
+        }
+      }
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}
