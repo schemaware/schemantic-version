@@ -1,0 +1,21 @@
+{{change}}({{scope}}): {{subject}}
+
+{#
+<% if (change === 'major') { %>BREAKING CHANGE<% } %>
+
+Current version: ${versionCurrent}
+New version: ${versionNew}
+
+<% if (changes.major) { %>Breaking changes ❌<% } %>
+<% _.forEach(changes.major, c => { %>${c.simplePath}: ${c.message}<% }) %>
+
+<% if (changes.minor) { %>Minor changes ✅<% } %>
+<% _.forEach(changes.major, c => { %>${c.simplePath}: ${c.message}<% }) %>
+
+<% if (changes.patch) { %>Patch changes 🩹<% } %>
+<% _.forEach(changes.patch, c => { %>${c.simplePath}: ${c.message}<% }) %>
+
+<% if (warnings) { %>Warnings ⚠️<% } %>
+<% _.forEach(warnings, w => { %>
+${w}
+<% }) %> #}

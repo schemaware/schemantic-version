@@ -1,0 +1,5 @@
+{{= it.change}}({{= it.scope}}): {{= it.subject}}\n
+
+{{? it.change === 'major' }}BREAKING CHANGE\n{{?}}
+
+{{? it.versionRevision.patch }}Testing{{?}}
